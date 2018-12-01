@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 @Table(name="microservico")
 public class Microservico implements Serializable {
@@ -24,6 +26,7 @@ public class Microservico implements Serializable {
     @Column(name = "nome")
 	String nome;
 	
+    @JsonProperty("endpoint")
     @Column(name = "endPoint")
     String endPoint;
     
